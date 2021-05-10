@@ -20,7 +20,8 @@ fun main() {
     val purchaseAmount = 1200.50
     val previousAmount = 12000.50
     val regularity = true
-    println(String.format("Покупка - $purchaseAmount руб.," +
-            " после применения скидки - %.2f руб.",
-            musicLoverDiscount(purchaseAmount, previousAmount, regularity)))
+    val discount = musicLoverDiscount(purchaseAmount, previousAmount, regularity)
+    val output = String.format("Покупка - $purchaseAmount руб.," +
+            " после применения скидки - %.2f руб.", discount)
+    println(output)
 }
